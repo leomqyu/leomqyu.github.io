@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muquan Yu | Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .sidebar-link i {
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="files/cartoon_portrait_square.jpg" alt="Muquan Yu portrait">
+      <h2>Muquan Yu</h2>
+      <div class="contact">
+        <span class="sidebar-link"><i class="fa-solid fa-phone"></i> +852 54619640</span>
+        <a href="mailto:mqyu@link.cuhk.edu.hk" class="sidebar-link"><i class="fa-solid fa-envelope"></i> mqyu@link.cuhk.edu.hk</a>
+      </div>
+      <a href="https://github.com/leomqyu" target="_blank" class="sidebar-link">
+        <i class="fa-brands fa-github"></i> Github
+      </a>
+      
+      <a href="https://scholar.google.com/citations?user=8fm4uE8AAAAJ&hl=en&oi=ao" target="_blank" class="sidebar-link"><i class="fa-brands fa-google"></i> Google Scholar</a>
+      <button class="cv-btn" onclick="toggleCV()">View CV</button>
+    </div>
+    <div class="main">
+      <h1>Biography</h1>
+      <p>
+        📖 I am currently pursuing a BSc degree in Computer Science at the Chinese University of Hong Kong, with an expected graduation in 2026. <br>
+        <br>
+        🧠 My research interests span brain-inspired AI, AI for neuroscience, computer vision, and machine learning.
+      </p>
+      <!-- <h2>Research Experience</h2>
+      <ul>
+        <li><b>Monash University</b> (Prof. Adeel Razi, May 2025 – Now): fMRI methods project, naturalistic brain imaging, ML for behavioral prediction.</li>
+        <li><b>University of Hong Kong</b> (Prof. Andrew Luo, Nov 2024 – May 2025): Meta in-context learning for visual cortex activation, interpretable neuroscience, first author.</li>
+        <li><b>CUHK</b> (Prof. Yu Li, May 2024 – Now): Deep learning for RNA modification, motif discovery, co-first author.</li>
+        <li><b>CUHK</b> (Prof. Jinwei Gu, Jan 2024 – May 2024): Unified image signal processing, device-aware embeddings, coauthor.</li>
+      </ul>
+      <h2>Publications & Patents</h2>
+      <ul class="pub-list">
+        <li><b>Meta-Learning an In-Context Transformer Model of Human Higher Visual Cortex</b> (NeurIPS 2025, under review, first author)</li>
+        <li><b>Precise nucleotide-level RNA modification prediction with deep learning and language model</b> (RECOMB 2026, co-first author)</li>
+        <li><b>Uni-ISP: Unifying the Learning of ISPs from Multiple Cameras</b> (IEEE TIP 2024, coauthor)</li>
+        <li><b>Intelligent recognition method for cluster scenarios based on graph optimization</b> (Patent, 2024)</li>
+        <li><b>Indoor-Outdoor Fusion Positioning Method Based on Inertial Navigation Integration</b> (Patent, 2024)</li>
+        <li><b>Dynamic Reconfigurable System Design Method Based on FPGA</b> (Patent, 2023)</li>
+      </ul>
+      <h2>Competitions & Projects</h2>
+      <ul>
+        <li><b>ROBOCON 2024</b>: CUHK robot team, computer vision, autonomous robotics.</li>
+        <li><b>CUMCM 2023</b>: National Second Prize, team captain, hydrographic survey modeling.</li>
+        <li><b>Web-based Second-Hand Trading Platform</b>: Django, MySQL, HTML/CSS, PHP.</li>
+        <li><b>Memory Managing System Based on Dynamic Hash Table</b>: Efficient memory allocation, anchor point array.</li>
+        <li><b>Web-based Course Registration System</b>: PHP, MySQL, HTML.</li>
+        <li><b>AI Othello Player</b>: Command-line AI, decision-making algorithms.</li>
+      </ul>
+      <h2>Honors & Awards (Selected)</h2>
+      <ul>
+        <li>National Second Prize, CUMCM (2023)</li>
+        <li>HKSAR Government Talent Development Scholarship (2025)</li>
+        <li>Prof. Charles K. Kao Research Exchange Scholarship (2025)</li>
+        <li>CUHK Academic Excellence Scholarship (2025)</li>
+        <li>Hong Kong Chiu Chow Association Scholarships (2024)</li>
+        <li>CUHK CSE Bronze Award for Academic Excellence (2024)</li>
+        <li>Prof. Omar Wing Memorial Scholarship (2023)</li>
+        <li>CUHK Engineering Faculty Dean’s List (2023, 2024)</li>
+        <li>New Asia College Head’s List (2023, 2024)</li>
+      </ul> -->
+    </div>
+  </div>
+  <div id="cv-viewer" class="cv-viewer">
+    <button class="cv-close-btn" onclick="toggleCV()" title="Close CV">&times;</button>
+    <iframe src="files/CV_Muquan_Yu_26Fall_CUHK.pdf" width="100%" height="100%"></iframe>
+  </div>
+  <script>
+    function toggleCV() {
+      var viewer = document.getElementById('cv-viewer');
+      viewer.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

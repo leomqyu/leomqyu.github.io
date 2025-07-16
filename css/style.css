@@ -1,0 +1,134 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.sidebar {
+  width: 240px;
+  text-align: center;
+}
+.sidebar img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #eee;
+  margin-bottom: 18px;
+}
+.sidebar h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+.sidebar .contact {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #444;
+}
+.sidebar a {
+  display: block;
+  color: #1976d2;
+  text-decoration: none;
+  margin: 6px 0;
+  font-size: 1em;
+}
+.main {
+  flex: 1;
+}
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+h2 {
+  font-size: 1.3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #1976d2;
+}
+ul {
+  margin: 0 0 1em 1.2em;
+  padding: 0;
+}
+.cv-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 8px 18px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cv-btn:hover {
+  background: #125ea2;
+}
+.cv-viewer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, backdrop-filter 0.3s;
+}
+.cv-viewer.active {
+  display: flex;
+}
+.cv-viewer iframe {
+  width: 80vw;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px #0003;
+  background: #fff;
+}
+.cv-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  background: #fff;
+  color: #1976d2;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.cv-close-btn:hover {
+  background: #eee;
+}
+.pub-list {
+  margin: 0 0 1em 1.2em;
+  padding: 0;
+}
+.pub-list li {
+  margin-bottom: 0.7em;
+}
+@media (max-width: 900px) {
+  .container { flex-direction: column; align-items: stretch; }
+  .sidebar { width: 100%; margin-bottom: 30px; }
+} 
