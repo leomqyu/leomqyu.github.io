@@ -6,15 +6,20 @@ body {
   padding: 0;
 }
 .container {
-  max-width: 900px;
+  max-width: 930px;
   margin: 40px auto;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: flex-start;
 }
 .sidebar {
   width: 240px;
   text-align: center;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
+  height: fit-content;
+  z-index: 2;
 }
 .sidebar img {
   width: 180px;
@@ -42,6 +47,8 @@ body {
 }
 .main {
   flex: 1;
+  min-width: 0;
+  /* allow main to scroll if content is long */
 }
 h1 {
   font-size: 2em;
