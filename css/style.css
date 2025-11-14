@@ -172,7 +172,6 @@ ul {
   padding: 18px;
   background: #fff;
   box-shadow: 0 10px 30px rgba(32,35,38,0.06);
-  align-items: center;
 }
 .research-thumb {
   width: 150px;
@@ -244,7 +243,7 @@ ul {
   .container { flex-direction: column; align-items: stretch; }
   .sidebar { width: 100%; margin-bottom: 30px; position: static; }
   .main { margin-left: 0; }
-  .research-card { flex-direction: column; align-items: stretch; }
+  .research-card { flex-direction: column; }
   .research-thumb { width: 100%; height: 200px; }
 } 
 
