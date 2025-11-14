@@ -27,21 +27,40 @@
     gtag('config', 'G-G9VYQGCTBC');
   </script>
 </head>
+
 <body>
   <div class="container">
+    <!-- side bar -->
     <div class="sidebar">
       <img src="files/cartoon_portrait_square.jpg" alt="Muquan Yu portrait">
       <h2>Muquan Yu</h2>
-      <div class="contact">
-        <span class="sidebar-link"><i class="fa-solid fa-phone"></i> +852 54619640</span>
-        <a href="mailto:mqyu@link.cuhk.edu.hk" class="sidebar-link"><i class="fa-solid fa-envelope"></i> mqyu@link.cuhk.edu.hk</a>
-      </div>
-      <a href="https://github.com/leomqyu" target="_blank" class="sidebar-link">
-        <i class="fa-brands fa-github"></i> Github
-      </a>
       
-      <a href="https://scholar.google.com/citations?user=8fm4uE8AAAAJ&hl=en&oi=ao" target="_blank" class="sidebar-link"><i class="fa-brands fa-google"></i> Google Scholar</a>
+      <div class="contact" id="contact">
+        <span class="sidebar-link"><i class="fa-solid fa-phone"></i> +852 55381380</span>
+        <a href="mailto:leomqyu@outlook.com" class="sidebar-link"><i class="fa-solid fa-envelope"></i> leomqyu@outlook.com</a>
+      </div>
+
+
+      <div style="display: flex; justify-content: center; gap: 16px; margin-top: 10px; font-size: 1.7em;">
+        <a href="https://github.com/leomqyu" target="_blank" class="sidebar-link">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      
+        <a href="https://scholar.google.com/citations?user=8fm4uE8AAAAJ&hl=en&oi=ao" target="_blank" class="sidebar-link">
+          <i class="fa-brands fa-google"></i>
+        </a>
+      
+        <a href="https://www.linkedin.com/in/leo-muquan-yu-3200a32a9/" target="_blank" class="sidebar-link">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+      
+      
       <button class="cv-btn" onclick="toggleCV()">View CV</button>
+      
+      
+      
+      
       <!-- ClustrMaps Globe Widget (centered, sidebar) -->
       <br> <br>
       <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px; width: 100%;">
@@ -53,7 +72,7 @@
     </div>
     <div class="main" style="margin-left: 15px;">
       <!-- <div class="main" > -->
-      <h1>Biography</h1>
+      <h1 id="biography">Biography</h1>
       <!-- <h2>Hi there 👋</h2> -->
       <p>I'm <b>Muquan Yu</b> (喻牧泉), a final-year undergraduate student at the Chinese University of Hong Kong, majoring in Computer Science. 
         My research interests are in <b>Brain-Inspired AI</b> and <b>NeuroAI</b>.</p>
@@ -67,14 +86,23 @@
 
       <!-- News Section -->
       <hr style="margin: 32px 0 18px 0; border: none; border-top: 1px solid #d0d7de;">
-      <h2 style="font-family: inherit; color: #222;">News</h2>
+      <h2 id="news" style="font-family: inherit; color: #222;">News</h2>
       <ul style="font-family: inherit; font-size: 1.05em;">
+        <li> [2025.11] 🎉 <span class="hl-yellow">One</span> paper submitted to 
+          <a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank">CVPR 2026</a>, hoping for a good result!
+        </li>
+        <li> [2025.09] 🎉 <span class="hl-yellow">One</span> paper accepted by 
+          <a href="https://neurips.cc/Conferences/2025" target="_blank">NeurIPS 2025</a>.
+        </li>
+        <li> [2025.08] 🎉 <span class="hl-yellow">One</span> paper accepted by 
+          <a href="https://ieeexplore.ieee.org/xpl/topics.jsp?punumber=83" target="_blank">IEEE Transactions on Image Processing</a>.
+        </li>
         <li> [2025.07] 🚀 I have launched my personal website, stay tuned for more updates!</li>
       </ul>
 
       <!-- Blogs Section -->
       <hr style="margin: 18px 0 32px 0; border: none; border-top: 1px solid #d0d7de;">
-      <h2 style="font-family: inherit; color: #222;">My Blogs</h2>
+      <h2 id="blogs" style="font-family: inherit; color: #222;">My Blogs</h2>
       <ul style="font-family: inherit; font-size: 1.05em;">
         <li>🐞 <a href="https://leomqyu.github.io/Useful-Notes-and-Logs/problem_log/" target="_blank">Debug Diaries</a>
           <br>A log of my debugging experiences, solutions, and lessons learned from various technical challenges.</li>
@@ -88,11 +116,77 @@
         </li>
       </ul>
       <hr style="margin: 18px 0 32px 0; border: none; border-top: 1px solid #d0d7de;">
+
+      <!-- research -->
+      <section class="section">
+        <h2 id="research" style="font-family: inherit; color: #222; margin-bottom: 16px;">Research</h2>
+        <div class="research-section">
+          
+          <!-- articles -->
+
+          
+          <!-- start of a paper -->
+          <article class="research-card">
+            <!-- image -->
+            <div class="research-thumb">
+              <img src="files/research-2505-meta-ict.png" alt="Meta-learning NeuroAI illustration">
+            </div>
+
+            <!-- info -->
+            <div class="research-body">
+              <h3 class="research-title">Meta-Learning an In-Context Transformer Model of Human Higher Visual Cortex</h3>
+              <div class="research-venue">NeurIPS 2025</div>
+              <p class="research-authors"><b>Muquan Yu</b>, Mu Nan, Hossein Adeli, Jacob S. Prince, John A. Pyles, Leila Wehbe, Margaret M. Henderson, Michael J. Tarr, Andrew F. Luo</p>
+
+              <!-- links -->
+              <div class="research-links">
+                <a href="https://arxiv.org/abs/2505.15813" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/leomqyu/BraInCoRL" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+
+              <!-- intro -->
+              <p class="research-intro">
+                <!-- We explore how in-context transformers can be trained via meta-learning to replicate the adaptive responses observed in the human higher visual cortex, providing a bridge between neural computation and interpretable AI systems. -->
+              </p>
+            </div>
+          </article>
+          <!-- end of a paper -->
+
+          <!-- start of a paper -->
+          <article class="research-card">
+            <!-- image -->
+            <div class="research-thumb">
+              <img src="files/research-2412-uni-isp.png" alt="Uni-ISP">
+            </div>
+
+            <!-- info -->
+            <div class="research-body">
+              <h3 class="research-title">Uni-ISP: Towards Unifying the Learning of ISPs from Multiple Mobile Cameras</h3>
+              <div class="research-venue">IEEE Transactions on Image Processing</div>
+              <p class="research-authors">Lingen Li, Mingde Yao, Xingyu Meng, <b>Muquan Yu</b>, Tianfan Xue, Jinwei Gu</p>
+
+              <!-- links -->
+              <div class="research-links">
+                <a href="https://ieeexplore.ieee.org/abstract/document/11164496" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://lg-li.github.io/dataset/five-cam" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://lg-li.github.io/project/uni-isp" target="_blank" rel="noopener noreferrer">Dataset</a>
+              </div>
+
+              <!-- intro -->
+              <p class="research-intro">
+              </p>
+            </div>
+          </article>
+          <!-- end of a paper -->
+          
+        </div>
+      </section>
+      <hr style="margin: 18px 0 32px 0; border: none; border-top: 1px solid #d0d7de;">
     </div>
   </div>
   <div id="cv-viewer" class="cv-viewer">
     <button class="cv-close-btn" onclick="toggleCV()" title="Close CV">&times;</button>
-    <iframe src="files/CV_Muquan_Yu_26Fall_CUHK.pdf" width="100%" height="100%"></iframe>
+    <iframe src="files/CV_for_homepage.pdf" width="100%" height="100%"></iframe>
   </div>
   <script>
     function toggleCV() {
