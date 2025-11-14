@@ -183,7 +183,7 @@ ul {
 }
 .research-thumb {
   width: 150px;
-  height: 150px;
+  /* height: 150px; */
   flex-shrink: 0;
   border-radius: 14px;
   overflow: auto;
