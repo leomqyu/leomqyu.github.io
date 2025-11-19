@@ -53,6 +53,10 @@
         <a href="https://www.linkedin.com/in/leo-muquan-yu-3200a32a9/" target="_blank" class="sidebar-link">
           <i class="fa-brands fa-linkedin"></i>
         </a>
+
+        <a href="#" class="sidebar-link" onclick="toggleWechat(); return false;" aria-label="WeChat QR Code">
+          <i class="fa-brands fa-weixin"></i>
+        </a>
       </div>
       
       
@@ -192,9 +196,18 @@
     <button class="cv-close-btn" onclick="toggleCV()" title="Close CV">&times;</button>
     <iframe src="files/CV_for_homepage.pdf" width="100%" height="100%"></iframe>
   </div>
+  <div id="wechat-viewer" class="cv-viewer">
+    <button class="cv-close-btn" onclick="toggleWechat()" title="Close WeChat QR">&times;</button>
+    <img src="files/wechat.jpg" alt="WeChat QR code" class="wechat-modal-img">
+  </div>
   <script>
     function toggleCV() {
       var viewer = document.getElementById('cv-viewer');
+      viewer.classList.toggle('active');
+    }
+
+    function toggleWechat() {
+      var viewer = document.getElementById('wechat-viewer');
       viewer.classList.toggle('active');
     }
   </script>

@@ -115,6 +115,12 @@ ul {
   box-shadow: 0 2px 16px #0003;
   background: #fff;
 }
+.wechat-modal-img {
+  max-width: 60vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0003;
+}
 .cv-close-btn {
   position: absolute;
   top: 32px;
@@ -254,5 +260,4 @@ ul {
   .research-card { flex-direction: column; }
   .research-thumb { width: 100%; height: 200px; }
 } 
-
 
