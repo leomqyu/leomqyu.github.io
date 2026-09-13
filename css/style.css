@@ -63,13 +63,12 @@ body {
   margin: 0;
 }
 #visitor-globe-box {
-  position: relative;
+  text-align: center;
+  white-space: nowrap;
 }
 #visitor-globe-inner {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  translate: -50% 0;
+  display: inline-block;
+  vertical-align: top;
   transform-origin: top center !important;
 }
 .main {
