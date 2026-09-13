@@ -40,10 +40,17 @@ body {
 }
 .sidebar a {
   display: block;
-  color: #1976d2;
+  color: #224b8d;
   text-decoration: none;
   margin: 6px 0;
   font-size: 1em;
+}
+.main a {
+  color: #224b8d;
+}
+.main a:hover,
+.sidebar a:hover {
+  color: #1a386a;
 }
 .sidebar-icons {
   display: flex;
@@ -240,7 +247,7 @@ ul {
   border: 1px solid #d7e3ff;
   text-decoration: none;
   font-size: 0.9em;
-  color: #1a3c8b;
+  color: #224b8d;
   background: #f7faff;
 }
 .research-links span {
@@ -260,4 +267,3 @@ ul {
   .research-card { flex-direction: column; }
   .research-thumb { width: 100%; height: 200px; }
 } 
-
