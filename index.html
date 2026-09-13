@@ -62,13 +62,19 @@
       
       <button class="cv-btn" onclick="toggleCV()">View CV</button>
       
-      
-      
-      
-      <!-- ClustrMaps Globe Widget (centered, sidebar) -->
-      <br> <br>
+      <!-- MapMyVisitors 3D Globe -->
+      <br><br>
       <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px; width: 100%;">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Sm2t-HW_eu7wrNNtTNsiJ7PPNwk1zd_tREXIF4QIDAw&w=100" style="width:100px;max-width:100%;"></script>
+        <div id="mapmyvisitors-globe" style="width: 210px; min-height: 210px; display: flex; align-items: center; justify-content: center;">
+          <!--
+            MapMyVisitors requires a per-site token generated at https://mapmyvisitors.com/add.
+            Once generated for https://leomqyu.github.io/, replace YOUR_MAPMYVISITORS_TOKEN below
+            and uncomment the script tag:
+
+            <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=YOUR_MAPMYVISITORS_TOKEN"></script>
+          -->
+          <div style="font-size: 0.82em; color: #999; line-height: 1.4;">Visitors Globe</div>
+        </div>
         <div style="font-size: 0.78em; color: #888; margin-top: 6px;">
           Visitors Map
         </div>
@@ -77,16 +83,15 @@
     <div class="main" style="margin-left: 15px;">
       <!-- <div class="main" > -->
       <h1 id="biography">Biography</h1>
-      <!-- <h2>Hi there 👋</h2> -->
-      <p>I'm <b>Muquan Yu</b> (喻牧泉), a final-year undergraduate student at the Chinese University of Hong Kong, majoring in Computer Science. 
-        My research interests are in <b>Brain-Inspired AI</b> and <b>NeuroAI</b>.</p>
-      <!-- <h3>🎓 About Me</h3> -->
-      <ul>
-        <li>🌱 I'm currently learning <b>Computational Neuroscience</b>, <b>Computer Vision</b>, and <b>Deep Learning</b>.</li>
-        <li>👯 I'm looking to collaborate on <b>AI for Neuroscience</b> and <b>Brain-Inspired AI</b> projects!</li>
-        <!-- <li>📫 How to reach me: <a href="mailto:leoyu20220822@gmail.com">leoyu20220822@gmail.com</a></li>
-        <li>🌐 Homepage: <a href="https://leomqyu.github.io" target="_blank">leomqyu.github.io</a></li> -->
-      </ul>
+      <p>
+        I'm <b>Muquan Yu</b> (喻牧泉). I am currently a Ph.D. student in
+        <b><a href="https://www.cds.hku.hk/" target="_blank" rel="noopener noreferrer">School of Computing and Data Science</a></b>,
+        <b><a href="https://www.hku.hk/" target="_blank" rel="noopener noreferrer">The University of Hong Kong</a></b>,
+        supervised by <b><a href="https://i.cs.hku.hk/~yzyu/index.html" target="_blank" rel="noopener noreferrer">Prof. Yizhou Yu</a></b>.
+        Prior to that, I received my B.Sc. in Computer Science from
+        <b><a href="https://www.cuhk.edu.hk/" target="_blank" rel="noopener noreferrer">The Chinese University of Hong Kong</a></b>.
+        My research interests are broadly in <b>Machine Learning</b>, with a particular focus on <b>Computer Vision</b> and <b>Language Modeling</b>.
+      </p>
 
       <!-- News Section -->
       <hr style="margin: 32px 0 18px 0; border: none; border-top: 1px solid #d0d7de;">
@@ -223,7 +228,7 @@
   </div>
   <div id="cv-viewer" class="cv-viewer">
     <button class="cv-close-btn" onclick="toggleCV()" title="Close CV">&times;</button>
-    <iframe src="files/CV_for_homepage.pdf" width="100%" height="100%"></iframe>
+    <iframe src="files/Muquan_Yu_CV.pdf" width="100%" height="100%"></iframe>
   </div>
   <div id="wechat-viewer" class="cv-viewer">
     <button class="cv-close-btn" onclick="toggleWechat()" title="Close WeChat QR">&times;</button>
