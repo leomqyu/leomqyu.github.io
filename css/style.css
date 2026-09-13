@@ -62,6 +62,16 @@ body {
 .sidebar-icons a {
   margin: 0;
 }
+#visitor-globe-box {
+  position: relative;
+}
+#visitor-globe-inner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: top center !important;
+}
 .main {
   flex: 1;
   min-width: 0;
