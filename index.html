@@ -11,6 +11,15 @@
     .sidebar-link i {
       color: #222;
     }
+    #visitor-globe-box {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    #visitor-globe-inner {
+      transform-origin: top left;
+    }
   </style>
   <link rel="icon" type="image/jpeg" href="files/cartoon_portrait_square.jpg" sizes="32x32">
   <link rel="icon" type="image/jpeg" href="files/cartoon_portrait_square.jpg" sizes="64x64">
@@ -64,7 +73,11 @@
       
       <!-- MapMyVisitors 3D Globe -->
       <div style="display: flex; flex-direction: column; align-items: center; margin-top: 28px; width: 100%;">
-        <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=fckWRu5ebyKX4C7C4eozIATZJNRMceyFR3EcqgIY8h8"></script>
+        <div id="visitor-globe-box">
+          <div id="visitor-globe-inner">
+            <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=fckWRu5ebyKX4C7C4eozIATZJNRMceyFR3EcqgIY8h8"></script>
+          </div>
+        </div>
         <div style="font-size: 0.78em; color: #888; margin-top: 6px;">Visitors Map</div>
       </div>
     </div>
@@ -214,6 +227,11 @@
       <hr style="margin: 18px 0 32px 0; border: none; border-top: 1px solid #d0d7de;">
     </div>
   </div>
+
+  <div style="text-align: center; font-size: 0.78em; color: #888; margin: 8px 0 24px 0;">
+    Last updated: 2026-09-01
+  </div>
+
   <div id="cv-viewer" class="cv-viewer">
     <button class="cv-close-btn" onclick="toggleCV()" title="Close CV">&times;</button>
     <iframe src="files/Muquan_Yu_CV.pdf" width="100%" height="100%"></iframe>
@@ -232,6 +250,39 @@
       var viewer = document.getElementById('wechat-viewer');
       viewer.classList.toggle('active');
     }
+
+    function fitVisitorGlobe() {
+      var inner = document.getElementById('visitor-globe-inner');
+      if (!inner) return;
+
+      inner.style.transform = 'none';
+      inner.style.width = 'auto';
+      inner.style.height = 'auto';
+
+      var width = inner.scrollWidth;
+      var height = inner.scrollHeight;
+      var children = inner.children;
+
+      for (var i = 0; i < children.length; i++) {
+        if (children[i].id === 'mmvst_globe') continue;
+        var rect = children[i].getBoundingClientRect();
+        width = Math.max(width, rect.width);
+        height = Math.max(height, rect.height);
+      }
+
+      if (width > 0 && height > 0) {
+        var scale = Math.min(100 / width, 100 / height, 1);
+        inner.style.width = width + 'px';
+        inner.style.height = height + 'px';
+        inner.style.transform = 'scale(' + scale + ')';
+      }
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(fitVisitorGlobe, 300);
+      setTimeout(fitVisitorGlobe, 1200);
+      setTimeout(fitVisitorGlobe, 2500);
+    });
   </script>
   <!-- <div style="text-align:center; margin-top: 30px; font-size: 0.95em; color: #888;">
     <i class="fa-solid fa-chart-line"></i>
